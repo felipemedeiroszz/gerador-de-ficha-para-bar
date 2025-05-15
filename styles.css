@@ -213,6 +213,14 @@ button:hover {
     background-color: #da190b;
 }
 
+#exportPdf {
+    background-color: #FF9800;
+}
+
+#exportPdf:hover {
+    background-color: #f57c00;
+}
+
 .historico-container {
     margin-top: 30px;
     border-top: 1px solid #eee;
