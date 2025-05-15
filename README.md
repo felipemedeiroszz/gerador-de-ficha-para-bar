@@ -1,86 +1,64 @@
-Criador de Fichas para Bar
-Um aplicativo web simples para criar fichas personalizadas para bares, com opções de cores, logos e valores personalizáveis. As fichas podem ser impressas ou exportadas como PDF.
+# Criador de Fichas para Bar
 
-Funcionalidades
-Personalização completa:
+Um aplicativo web simples para criar fichas personalizadas para bares, com opções de cores, logos e valores. As fichas podem ser impressas ou exportadas como PDF.
 
-Nome do bar
+## Funcionalidades
 
-Valor da ficha (R$)
+- **Personalização completa**:
+  - Nome do bar
+  - Valor da ficha (R$)
+  - Quantidade de fichas (1-100)
+  - Seleção de logo (pré-definidas ou personalizada)
+  - Escolha de cores (fundo e texto)
 
-Quantidade de fichas (1-100)
+- **Visualização em tempo real**:
+  - Pré-visualização das fichas antes de imprimir
 
-Cor de fundo da ficha
+- **Geração de fichas**:
+  - Impressão direta
+  - Exportação para PDF
 
-Cor do texto
+- **Histórico**:
+  - Armazenamento local das últimas fichas criadas
+  - Recuperação e reimpressão de fichas anteriores
+  - Exclusão de itens do histórico
 
-Logo do bar (opções pré-definidas ou upload personalizado)
+## Como Usar
 
-Visualização em tempo real das fichas criadas
+1. **Preencha os dados**:
+   - Insira o nome do bar
+   - Defina o valor de cada ficha
+   - Escolha a quantidade desejada
 
-Histórico das últimas 10 fichas criadas (armazenado localmente no navegador)
+2. **Personalize**:
+   - Selecione uma logo (ou envie a sua própria)
+   - Escolha as cores de fundo e texto
 
-Opções de exportação:
+3. **Gere as fichas**:
+   - Clique em "Gerar Fichas" para visualizar
+   - Use "Imprimir Fichas" ou "Exportar PDF" para salvar
 
-Imprimir fichas diretamente
+4. **Histórico**:
+   - Acesse fichas criadas anteriormente
+   - Reimprima ou exclua itens do histórico
 
-Exportar como PDF
+## Tecnologias Utilizadas
 
-Como Usar
-Preencha os detalhes do bar:
+- HTML5, CSS3 e JavaScript
+- LocalStorage para armazenamento local
+- Biblioteca [html2pdf.js](https://github.com/eKoopmans/html2pdf.js) para exportação em PDF
 
-Nome do estabelecimento
+## Compatibilidade
 
-Valor de cada ficha
+- Compatível com a maioria dos navegadores modernos
+- Responsivo para diferentes tamanhos de tela
+- Otimizado para impressão
 
-Quantidade de fichas desejada
+## Desenvolvedor
 
-Escolha um logo:
-
-Opções pré-definidas
-
-Upload de imagem personalizada
-
-Opção sem logo
-
-Selecione as cores:
-
-Cor de fundo da ficha
-
-Cor do texto
-
-Clique em "Gerar Fichas" para visualizar
-
-Na pré-visualização:
-
-Imprima as fichas diretamente
-
-Exporte como PDF
-
-Volte para fazer ajustes
-
-Acesse o histórico para reimprimir ou excluir fichas anteriores
-
-Tecnologias Utilizadas
-HTML5
-
-CSS3
-
-JavaScript
-
-Biblioteca html2pdf.js para exportação em PDF
-
-Desenvolvedor
-Felipe
+Felipe  
 Contato: (16) 99381-7699
 
-Notas
-As fichas criadas são armazenadas apenas no navegador local (localStorage)
+## Licença
 
-O histórico mantém apenas as últimas 10 fichas criadas
-
-O aplicativo é responsivo e funciona bem em dispositivos móveis
-
-Licença
-Este projeto está disponível para uso livre. Sinta-se à vontade para modificar e adaptar às suas necessidades.
-
+Este projeto está disponível para uso livre. Sinta-se à vontade para modificar e distribuir.
