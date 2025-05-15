@@ -205,4 +205,25 @@ document.addEventListener('DOMContentLoaded', function() {
         formContainer.style.display = 'none';
         fichasPreview.classList.remove('hidden');
     }
+    
+    // Add new button for PDF export
+    const exportPdfBtn = document.createElement('button');
+    exportPdfBtn.id = 'exportPdf';
+    exportPdfBtn.textContent = 'Exportar PDF';
+    exportPdfBtn.style.backgroundColor = '#FF9800';
+    document.querySelector('.actions').appendChild(exportPdfBtn);
+
+    // PDF Export functionality
+    exportPdfBtn.addEventListener('click', function() {
+        const element = document.getElementById('fichas-container');
+        const opt = {
+            margin:       10,
+            filename:     `fichas_${document.getElementById('nome').value || 'bar'}.pdf`,
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    });
 });
