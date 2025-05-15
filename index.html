@@ -1,0 +1,107 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFI informatica </title>
+     <link rel="icon" type="image/jpeg" href="logolfi.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Fichas para Bar</h1>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="nome">Nome do Bar:</label>
+                <input type="text" id="nome" placeholder="Ex: Bar do João">
+            </div>
+            
+            <div class="form-group">
+                <label for="valor">Valor da Ficha (R$):</label>
+                <input type="number" id="valor" min="1" step="0.50" value="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="quantidade">Quantidade de Fichas:</label>
+                <input type="number" id="quantidade" min="1" max="100" value="4">
+            </div>
+            
+            <div class="form-group">
+                <label>Logo do Bar:</label>
+                <div class="logo-options">
+                    <div class="logo-option">
+                        <input type="radio" id="logoNone" name="logo" value="none">
+                        <label for="logoNone">
+                            <div class="no-logo">Sem Logo</div>
+                        </label>
+                    </div>
+                    
+                    </div>
+                    <div class="logo-option custom-logo">
+                        <input type="radio" id="logoCustom" name="logo" value="custom">
+                        <label for="logoCustom">
+                            <div class="upload-logo">+</div>
+                        </label>
+                        <input type="file" id="logoUpload" accept="image/*" class="hidden">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group color-picker">
+                <label for="cor">Cor da Ficha:</label>
+                <input type="color" id="cor" value="#f5a742">
+            </div>
+
+            <div class="form-group color-picker">
+                <label for="corTexto">Cor do Texto:</label>
+                <input type="color" id="corTexto" value="#FFFFFF">
+            </div>
+
+            <button id="gerarFichas">Gerar Fichas</button>
+        </div>
+        
+        <div id="fichas-preview" class="hidden">
+            <h2>Pré-visualização das Fichas</h2>
+            <div id="fichas-container"></div>
+            <div class="actions">
+                <button id="imprimir">Imprimir Fichas</button>
+                <button id="voltar">Voltar</button>
+            </div>
+        </div>
+
+        <div id="historico-container" class="historico-container">
+            <h2>Histórico de Fichas</h2>
+            <div id="historico-list"></div>
+        </div>
+    </div>
+    
+    <footer class="page-footer">
+        Desenvolvido por Felipe (16)99381-7699
+    </footer>
+    
+    <script src="script.js"></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyARUKQO7wsILJJrhNeZjbFM-suzhoAv1-w",
+    authDomain: "geradordeficha.firebaseapp.com",
+    projectId: "geradordeficha",
+    storageBucket: "geradordeficha.firebasestorage.app",
+    messagingSenderId: "502053388936",
+    appId: "1:502053388936:web:d07a6c0f12bd69ac30953d",
+    measurementId: "G-TMT918SE1K"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
