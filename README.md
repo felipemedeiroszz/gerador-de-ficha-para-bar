@@ -2,6 +2,8 @@
 
 Um aplicativo web simples para criar fichas personalizadas para bares, com opções de cores, logos e valores. As fichas podem ser impressas ou exportadas como PDF.
 
+https://geradordeficha.web.app/
+
 ## Funcionalidades
 
 - **Personalização completa**:
